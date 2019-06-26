@@ -41,7 +41,7 @@ namespace UnauthorizedException.ViewModels
                 IPathResolver pathResolver = DependencyService.Get<IPathResolver>();
 
                 if (path.ToLower().Contains(":"))
-                    path = pathResolver.GetRealPath(path);      //converts path like content://, file:// to /storage/
+                    path = pathResolver.GetRealPath(path);      //converts paths like content://, file:// to /storage/
 
                 Console.WriteLine("File path: " + path);
 
